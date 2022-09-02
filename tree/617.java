@@ -1,4 +1,4 @@
-🧠Approach 1 : Using preorder recursion
+/*🧠Approach 1 : Using preorder recursion
 
 Idea:
 The idea is to visit each node of the input binary tree using preorder andcheck their existence in both the trees. If current nodes in both trees are not null then we add their values and update node value in root1 and return it at the last. 
@@ -17,7 +17,7 @@ If both are not NULL, update the first tree, i.e, tree1, with the summation of v
 Make the recursive call for left subtree and right subtree.
 
 At last, return the treenode of tree1, as it contains the merged version of both trees.
-
+*/
 
 class Solution {
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) 
@@ -40,6 +40,7 @@ class Solution {
     }
 }
 
+/*
 ⏳Analysis:
 Time complexity: O(n)
 Space complexity: O(n)
@@ -71,7 +72,7 @@ At the end, we return the merged root, i.e, root1.
 
 
 
-
+*/
 
 
 
@@ -114,7 +115,7 @@ Space complexity: O(n)
 
 
 
-
+/*
 
 
 🧠Other approaches:
@@ -125,7 +126,7 @@ We can use BFS(level order traversal)/DFS. The idea will remain same as above ex
 Using BFS traversal:
 
 
-
+*/
 
 
 class Solution {
