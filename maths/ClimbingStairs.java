@@ -3,11 +3,11 @@ class Solution{
 		if(n<=2)
 			return n;
 		else
-			return climbStairs(n-1) + climbSttairs(n-2);
+			return climbStairs(n-1) + climbStairs(n-2);
 	}
 }
 
-/*
+/* TLE
 We're using recursion approach here.
 Ex: n=4
 return 3+2=5 steps
@@ -18,3 +18,13 @@ d) 1+1+2: 4 way
 e) 2+2: 5 way
 
 */
+
+public int climbStairs(int n) {
+    int[] dp = new int[n + 1]; // save all caculated values
+    dp[0] = 1; // base case
+    dp[1] = 1; // base case
+    for (int i = 2; i <= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[n];
+}
